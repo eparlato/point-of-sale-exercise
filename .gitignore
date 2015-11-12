@@ -1,0 +1,6 @@
+# Java stuff to ignore
+*.class
+
+# Eclipse project file and folders to ignore
+.settings
+/bin
