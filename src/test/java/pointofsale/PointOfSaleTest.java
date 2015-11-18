@@ -1,5 +1,7 @@
 package pointofsale;
 
+import static org.junit.Assert.*;
+
 import org.jmock.Expectations;
 import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.junit.Rule;
@@ -23,6 +25,20 @@ public class PointOfSaleTest {
 		});
 		
 		pos.onBarCode("");
+	}
+	
+	@Test
+	public void nullBarcode() throws Exception {
+		final Display display = context.mock(Display.class);
+		PointOfSale pos = new PointOfSale(display);
+		
+		context.checking(new Expectations(){
+			{
+				oneOf(display).show("No code received");
+			}
+		});
+		
+		pos.onBarCode(null);
 	}
 	
 }
