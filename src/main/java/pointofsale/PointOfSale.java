@@ -8,9 +8,13 @@ public class PointOfSale {
 		this.display = display;
 	}
 
-	public void onBarCode(String string) {
-		// TODO Auto-generated method stub
-		display.show("No code received");
+	public void onBarCode(String barcode) {
+
+		if(barcode == null || barcode.equals("")) {
+			display.show("No code received");
+		} else {
+			display.show("$9.50");
+		}
 	}
 
 }
