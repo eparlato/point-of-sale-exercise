@@ -1,7 +1,5 @@
 package pointofsale;
 
-import static org.junit.Assert.*;
-
 import org.jmock.Expectations;
 import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.junit.Before;
@@ -73,5 +71,19 @@ public class PointOfSaleTest {
 		});
 
 		pos.onBarCode("ASD123");
+	}
+	
+	@Test
+	public void itemNotFound() throws Exception {
+		
+		context.checking(new Expectations() {
+			{
+				allowing(store).getItem("98765A");
+				will(returnValue(null));
+				oneOf(display).show("Not found in store");
+			}
+		});
+		
+		pos.onBarCode("98765A");
 	}
 }

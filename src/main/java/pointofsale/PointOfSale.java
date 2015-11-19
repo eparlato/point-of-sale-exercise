@@ -16,7 +16,12 @@ public class PointOfSale {
 			display.show("No code received");
 		} else {
 			Item item = store.getItem(barcode);
-			display.show(item.getPrice());
+			
+			if(item != null) {
+				display.show(item.getPrice());
+			} else {
+				display.show("Not found in store");
+			}
 		}
 	}
 
