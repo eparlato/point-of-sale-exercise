@@ -2,5 +2,5 @@ package pointofsale;
 
 public interface Store {
 
-	String getPrice(String barcode);
+	Item getItem(String string);
 }

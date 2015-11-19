@@ -52,26 +52,26 @@ public class PointOfSaleTest {
 
 		context.checking(new Expectations() {
 			{
-				allowing(store).getPrice("12345");
+				allowing(store).getItem("12345");
+				will(returnValue(new Item("12345", "$9.50")));
 				oneOf(display).show("$9.50");
 			}
 		});
 
 		pos.onBarCode("12345");
 	}
-	
+
 	@Test
 	public void showAnotherItemPriceOnDisplay() throws Exception {
-		
-		
+
 		context.checking(new Expectations() {
 			{
-				allowing(store).getPrice("ASD123"); 
-				will(returnValue("$13.75"));
+				allowing(store).getItem("ASD123");
+				will(returnValue(new Item("ASD123", "$13.75")));
 				oneOf(display).show("$13.75");
 			}
 		});
-		 
+
 		pos.onBarCode("ASD123");
 	}
 }

@@ -15,15 +15,8 @@ public class PointOfSale {
 		if (barcode == null || barcode.equals("")) {
 			display.show("No code received");
 		} else {
-			
-			String price = store.getPrice(barcode);
-			
-			if(price.equals("$13.75")) {
-				display.show(price);
-			} else {
-				display.show("$9.50");
-			}
-			
+			Item item = store.getItem(barcode);
+			display.show(item.getPrice());
 		}
 	}
 
