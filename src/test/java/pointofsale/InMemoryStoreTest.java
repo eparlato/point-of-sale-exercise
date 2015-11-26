@@ -1,9 +1,9 @@
 package pointofsale;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -11,11 +11,11 @@ public class InMemoryStoreTest {
 
 	@Test
 	public void itemFound() throws Exception {
-		List<Item> items = new ArrayList<Item>();
-		items.add(new Item("qwerty1", "$5.65"));
+		Map<String, Item> items = new HashMap<String, Item>();
+		items.put("qwerty1", new Item("qwerty1", "$5.65"));
 		
-		Store store = new InMemoryStore();
+		Store store = new InMemoryStore(items);
 		
-		assertEquals(store.getItem("qwerty").getPrice(), "$5.65");
+		assertEquals(store.getItem("qwerty1").getPrice(), "$5.65");
 	}
 }
