@@ -1,0 +1,10 @@
+TEST LIST
+---------
+[X] Item object
+Price object?
+
+[X] onBarCode("12345") -> display("$9.50")
+[X] onBarCode("ASD123") -> display("$13.75")
+[X] onBarCode("98765A") -> display("Not found")
+[X] onBarCode(null) -> display("Device error")
+[X] onBarCode("") -> display("No code received") << KERNEL
