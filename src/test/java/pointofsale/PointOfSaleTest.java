@@ -30,7 +30,7 @@ public class PointOfSaleTest {
 			}
 		});
 
-		pos.onBarCode("");
+		pos.onBarcode("");
 	}
 
 	@Test
@@ -42,7 +42,7 @@ public class PointOfSaleTest {
 			}
 		});
 
-		pos.onBarCode(null);
+		pos.onBarcode(null);
 	}
 
 	@Test
@@ -56,7 +56,7 @@ public class PointOfSaleTest {
 			}
 		});
 
-		pos.onBarCode("12345");
+		pos.onBarcode("12345");
 	}
 
 	@Test
@@ -70,7 +70,7 @@ public class PointOfSaleTest {
 			}
 		});
 
-		pos.onBarCode("ASD123");
+		pos.onBarcode("ASD123");
 	}
 	
 	@Test
@@ -84,6 +84,6 @@ public class PointOfSaleTest {
 			}
 		});
 		
-		pos.onBarCode("98765A");
+		pos.onBarcode("98765A");
 	}
 }

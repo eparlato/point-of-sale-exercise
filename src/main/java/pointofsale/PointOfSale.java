@@ -10,7 +10,7 @@ public class PointOfSale {
 		this.store = store;
 	}
 
-	public void onBarCode(String barcode) {
+	public void onBarcode(String barcode) {
 
 		if (barcode == null || barcode.equals("")) {
 			display.show("No code received");
