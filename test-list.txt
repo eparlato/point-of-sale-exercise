@@ -13,4 +13,4 @@ Price object?
 [X] InMemoryStore.getItem("zxcv987") -> null
 
 [X] ConsoleDisplay.show("$100.01") -> getLastTextDisplayed() -> "$100.01"
-[] ConsoleDisplay.show("Not found in store") -> getLastTextDisplayed() -> "Not found in store"
+[X] ConsoleDisplay.show("Not found in store") -> getLastTextDisplayed() -> "Not found in store"
