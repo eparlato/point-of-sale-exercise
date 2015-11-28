@@ -9,5 +9,5 @@ Price object?
 [X] onBarCode(null) -> display("Device error")
 [X] onBarCode("") -> display("No code received") << KERNEL
 
-[] InMemoryStore.getItem("qwerty1") -> new Item("qwerty1", "$5.65")
-[] InMemoryStore.getItem("zxcv987") -> null
+[X] InMemoryStore.getItem("qwerty1") -> new Item("qwerty1", "$5.65")
+[X] InMemoryStore.getItem("zxcv987") -> null
